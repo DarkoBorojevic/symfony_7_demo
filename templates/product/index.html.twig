@@ -4,6 +4,28 @@
 
 {% block body %}
 
-    <h1>Hello {{ controller_name }}</h1>
+    <h1>Products</h1><br />
+
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Size</th>
+        </thead>
+        <tbody>
+            {% for product in all_products %}
+                <tr>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.size }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Size</th>
+        </tfoot>
+    </table>
 
 {% endblock %}
